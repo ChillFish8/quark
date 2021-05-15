@@ -1,0 +1,29 @@
+[package]
+name = "quarkdb"
+version = "0.1.0"
+authors = ["Harrison Burt <57491488+ChillFish8@users.noreply.github.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+evmap = "10"
+rkyv = "0.4.2"
+bytes = "1"
+quinn = "0.7.2"
+rcgen = "0.8"
+anyhow = "1"
+futures = "0.3"
+structopt = "0.3.21"
+fxhash = "0.2.1"
+libc = "0.2.69"
+mio = { version = "0.7.7", features = ["net"] }
+once_cell = "1.7.2"
+rustls = { version = "0.19", features = ["quic"], optional = true }
+socket2 = "0.4"
+thiserror = "1.0.21"
+tracing-futures = { version = "0.2.0", default-features = false, features = ["std-future"] }
+tracing = "0.1.10"
+tokio = { version = "1", features = ["full"] }
+
+quark-storage = { path = "./quark-storage", version = "*" }
